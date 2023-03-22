@@ -1,0 +1,9 @@
+---
+
+- name: Sample to run shell command
+  hosts: managenode
+  tasks:
+   
+   - name: Run shell 
+     shell:
+       

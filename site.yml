@@ -1,0 +1,11 @@
+---
+
+ - name: play to setup web server
+   hosts: managenode
+   tasks:
+    - name: latest httpd version installed
+      yum:
+        name: httpd
+        state: latest
+  
+

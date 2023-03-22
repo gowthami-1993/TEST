@@ -1,0 +1,17 @@
+---
+
+- name: Create a CSV file
+  hosts: managenode
+  tasks:
+    - name: Create a csv
+      file:
+         path: /home/ansible/file.csv
+         state: touch
+     
+    - name: Adding initial line to spreadsheet
+      lineinfile:
+        insertafter: EOF
+        dest: /home/ansible/file.csv
+        line: Hostname,OS Version,Non-Approved Users,Last Updated,Firewall Status,RAID Status
+
+... 
